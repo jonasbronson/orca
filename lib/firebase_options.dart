@@ -17,7 +17,10 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      return web;
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web - '
+        'you can reconfigure this by running the FlutterFire CLI again.',
+      );
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -46,31 +49,20 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBVXDJx-XwR5WnXxa57SPB4YUrMyu5YxOM',
-    appId: '1:537702287657:web:0497f74dd48ce2550d4f38',
-    messagingSenderId: '537702287657',
-    projectId: 'orca-471102',
-    authDomain: 'orca-471102.firebaseapp.com',
-    storageBucket: 'orca-471102.firebasestorage.app',
-    measurementId: 'G-7Y1EXB4ZCW',
-  );
-
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBPJaZL061ZmSpCUkFCXZeUcgHzYhmUtq0',
-    appId: '1:537702287657:android:8462771dde37362f0d4f38',
-    messagingSenderId: '537702287657',
-    projectId: 'orca-471102',
-    storageBucket: 'orca-471102.firebasestorage.app',
+    apiKey: 'AIzaSyA-xxTRmzqjHGnJ3aul598j3kcUyRb1Pnk',
+    appId: '1:1083126156623:android:731f4d4f100d008aa7c93a',
+    messagingSenderId: '1083126156623',
+    projectId: 'orca-471203',
+    storageBucket: 'orca-471203.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyA9D3aJfWjXJvGxVYIPBy22_1684LlkGHI',
-    appId: '1:537702287657:ios:449c6e2a5b833b810d4f38',
-    messagingSenderId: '537702287657',
-    projectId: 'orca-471102',
-    storageBucket: 'orca-471102.firebasestorage.app',
+    apiKey: 'AIzaSyDp6n4mlJRv2-zRw5agor_psbAIivD3dJ0',
+    appId: '1:1083126156623:ios:9f2d60c2444e6f7ca7c93a',
+    messagingSenderId: '1083126156623',
+    projectId: 'orca-471203',
+    storageBucket: 'orca-471203.firebasestorage.app',
     iosBundleId: 'com.example.orca',
   );
-
 }
