@@ -1,1 +1,38 @@
-{"flutter":{"platforms":{"android":{"default":{"projectId":"orca-471203","appId":"1:1083126156623:android:731f4d4f100d008aa7c93a","fileOutput":"android/app/google-services.json"}},"dart":{"lib/firebase_options.dart":{"projectId":"orca-471203","configurations":{"android":"1:1083126156623:android:731f4d4f100d008aa7c93a","ios":"1:1083126156623:ios:9f2d60c2444e6f7ca7c93a"}}}}}}
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "orca-471203",
+          "appId": "1:1083126156623:android:731f4d4f100d008aa7c93a",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "orca-471203",
+          "configurations": {
+            "android": "1:1083126156623:android:731f4d4f100d008aa7c93a",
+            "ios": "1:1083126156623:ios:9f2d60c2444e6f7ca7c93a"
+          }
+        }
+      }
+    }
+  },
+  "functions": [
+    {
+      "source": "functions",
+      "codebase": "default",
+      "ignore": [
+        "node_modules",
+        ".git",
+        "firebase-debug.log",
+        "firebase-debug.*.log",
+        "*.local"
+      ],
+      "predeploy": [
+        "npm --prefix \"$RESOURCE_DIR\" run lint"
+      ]
+    }
+  ]
+}

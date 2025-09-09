@@ -1,5 +1,5 @@
 enum AppRoute {
-  //login,
+  login,
   home,
   //settings,
 }
@@ -7,10 +7,8 @@ enum AppRoute {
 extension AppRoutePath on AppRoute {
   String get path {
     switch (this) {
-      /*
       case AppRoute.login:
         return '/login';
-      */
       case AppRoute.home:
         return '/home';
         /*

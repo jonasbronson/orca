@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       routerConfig: router,
-      title: 'Flutter Router Example',
+      title: 'Orca',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
